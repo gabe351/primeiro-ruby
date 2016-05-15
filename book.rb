@@ -1,11 +1,13 @@
 class Livro
-  attr_reader :titulo, :preco, :ano_lancamento, :reimpressao
+  attr_reader :titulo, :preco, :ano_lancamento, :reimpressao, :editora, :tipo
   #construtor do objeto
-  def initialize(titulo, preco, ano_lancamento, reimpressao)
+  def initialize(titulo, preco, ano_lancamento, reimpressao, editora, tipo)
     @titulo = titulo
     @ano_lancamento = ano_lancamento
     @preco = calcula_preco(preco)
     @reimpressao = reimpressao
+    @editora = editora
+    @tipo = tipo
   end
   #metodo para chamar os livros.
   def to_csv
